@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">YourWayCafe</string>
+    <string name="btn_fav">Favorites</string>
+    <string name="btn_prev">Previous Orders</string>
+    <string name="btn_start">Start Order</string>
+</resources>
