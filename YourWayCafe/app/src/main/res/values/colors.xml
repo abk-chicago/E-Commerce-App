@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#5D4037</color>
-    <color name="colorPrimaryDark">#E64A19</color>
-    <color name="colorAccent">#FFAB00</color>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#3E2723</color>
+    <color name="colorAccent">#DD2C00</color>
     <color name="main_background">#5D4037</color>
-    <color name="start_btn">#E64A19</color>
-    <color name="prev_btn">#E64A19</color>
-    <color name="fave_button">#E64A19</color>
+    <color name="start_btn">#795548</color>
+    <color name="prev_btn">#795548</color>
+    <color name="fave_button">#795548</color>
 
 </resources>

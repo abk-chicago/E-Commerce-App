@@ -47,10 +47,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/main_img"
-        android:src="@drawable/feast_buffet"
-        android:contentDescription="@string/content_description"
+        android:layout_above="@+id/btn_start"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:src="@drawable/feast_buffet"
+        android:contentDescription="@string/content_description"
         android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mix_match"
+        android:id="@+id/mix_msg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
