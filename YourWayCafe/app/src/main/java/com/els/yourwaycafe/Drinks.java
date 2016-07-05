@@ -8,6 +8,16 @@ public class Drinks {
     private String brand;
     private int brandPrice;
 
+
+    public static final Drinks[] drinks = {
+            new Drinks(1,"Coke",1),
+            new Drinks(2,"Diet Coke",1),
+            new Drinks(3,"Iced Tea",2),
+            new Drinks(4,"Lemonade",2),
+            new Drinks(5,"Coffee",2)
+
+    };
+
     public Drinks(int id, String brand, int brandPrice) {
         this.id = id;
         this.brand = brand;

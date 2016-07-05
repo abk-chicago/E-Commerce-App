@@ -5,4 +5,9 @@
     <string name="btn_start">Start Order</string>
     <string name="content_description">feast</string>
     <string name="mix_match">Mix and match your way to your customized meal!</string>
+    <string-array name="menu">
+        <item>Proteins</item>
+        <item>Sides</item>
+        <item>Drinks</item>
+    </string-array>
 </resources>

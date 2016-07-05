@@ -1,24 +1,35 @@
 package com.els.yourwaycafe;
 
-import android.content.Intent;
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class FoodMenuActivity extends AppCompatActivity {
-    private Intent Drinks;
-    private Intent Proteins;
-    private Intent Sides;
-    private Button mcart;
-    private Spinner mSpinner;
-    private SpinnerAdapter mSpinnerAdapter;
+public class FoodMenuActivity extends ListActivity {
+
+    private ListView mListViewMenu;
+    private ArrayAdapter mArrayAdapter;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_menu);
-    }
-}
+
+
+        mListViewMenu = (ListView)findViewById(R.id.list);
+
+
+
+
+
+
+
+
+
+
+
+
+}}
