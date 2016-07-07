@@ -1,14 +1,14 @@
 package com.els.yourwaycafe;
 
-import android.app.ListActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.support.v7.app.AppCompatActivity;
 
-public class FoodMenuActivity extends ListActivity {
+public class FoodMenuActivity extends AppCompatActivity {
 
-    private ListView mListViewMenu;
-    private ArrayAdapter mArrayAdapter;
+//    Spinner mProteinSpinner = (Spinner)findViewById(R.id.spinner_proteins);
+//    Spinner mSidesSpinner = (Spinner) findViewById(R.id.spinner_sides);
+//    Spinner mDrinksSpinner = (Spinner) findViewById(R.id.spinner_drinks);
+//    Spinner mVegSpinner = (Spinner)findViewById(R.id.spinner_veg);
 
 
 
@@ -19,7 +19,6 @@ public class FoodMenuActivity extends ListActivity {
         setContentView(R.layout.activity_food_menu);
 
 
-        mListViewMenu = (ListView)findViewById(R.id.list);
 
 
 
@@ -27,9 +26,5 @@ public class FoodMenuActivity extends ListActivity {
 
 
 
-
-
-
-
-
-}}
+    }
+}

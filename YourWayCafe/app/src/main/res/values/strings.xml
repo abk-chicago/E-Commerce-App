@@ -5,9 +5,34 @@
     <string name="btn_start">Start Order</string>
     <string name="content_description">feast</string>
     <string name="mix_match">Mix and match your way to your customized meal!</string>
-    <string-array name="menu">
-        <item>Proteins</item>
-        <item>Sides</item>
-        <item>Drinks</item>
+    <string-array name="proteins">
+        <item>Choose your protein!</item>
+        <item>Rib eye Steak</item>
+        <item>Roast chicken</item>
+        <item>Baked pork chops</item>
+        <item>Fried tilapia</item>
+        <item>Hearty black beans</item>
+    </string-array>
+    <string-array name="sides">
+        <item>Choose your side!</item>
+        <item>Mashed potatoes</item>
+        <item>French fries</item>
+        <item>Mac and cheese</item>
+        <item>Coleslaw</item>
+    </string-array>
+    <string-array name="drinks">
+        <item>Choose your drink!</item>
+        <item>Coke</item>
+        <item>Diet Coke</item>
+        <item>Iced Tea</item>
+        <item>Lemonade</item>
+        <item>Coffee</item>
+    </string-array>
+    <string-array name="veg">
+        <item>Choose your veggie!</item>
+        <item>Sauteed spinach</item>
+        <item>Baby corn</item>
+        <item>Asparagus</item>
+        <item>Broccoli and carrots</item>
     </string-array>
 </resources>

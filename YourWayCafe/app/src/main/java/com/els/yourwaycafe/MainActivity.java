@@ -8,37 +8,50 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mStart;
-//    Button mPrev;
-//    Button mFav;
-    Intent mIntent;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mStart = (Button) findViewById(R.id.btn_start);
-//        mFav = (Button) findViewById(R.id.btn_fav);
-//        mPrev = (Button) findViewById(R.id.btn_prev);
+        Button mStart = (Button)findViewById(R.id.btn_start);
+        Button mPrev = (Button) findViewById(R.id.btn_prev);
+        Button mFav = (Button)findViewById(R.id.btn_fav);
+        View.OnClickListener listener;
 
+        assert mStart != null;
 
-        mIntent = new Intent(MainActivity.this, FoodMenuActivity.class);
-
-
-        View.OnClickListener listener = new View.OnClickListener() {
+        mStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(mIntent);
-
-
+                Intent mIntentMenu = new Intent(MainActivity.this,FoodMenuActivity.class);
+                startActivity(mIntentMenu);
             }
-        };
-        mStart.setOnClickListener(listener);
+        });
+
+
+
+
+
 
     }
+
+//    public static void startClick(View v) {
+//        @Override
+//
+//
+//
+//
+//
+//    }
+//
+//    public static void showFav(View v){
+//
+//    }
+//
+//    public static void showPrev(View v) {
+//
+//    }
 }
 
 

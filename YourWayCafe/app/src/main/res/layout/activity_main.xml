@@ -18,7 +18,8 @@
         android:text="@string/btn_start"
         android:textColor="#ffffff"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="startClick"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -30,7 +31,9 @@
         android:layout_marginTop="67dp"
         android:background="@color/prev_btn"
         android:text="@string/btn_prev"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:onClick="showPrev"/>
+
 
     <Button
         android:layout_width="wrap_content"
@@ -41,7 +44,8 @@
         android:layout_alignParentEnd="true"
         android:background="@color/fave_button"
         android:text="@string/btn_fav"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:onClick="showFav"/>
 
     <ImageView
         android:layout_width="wrap_content"
