@@ -4,6 +4,7 @@
     <string name="btn_prev">Previous Orders</string>
     <string name="btn_start">Start Order</string>
     <string name="content_description">feast</string>
+    <string name="search_hint">Enter your favorites here</string>
     <string name="mix_match">Mix and match your way to your customized meal!</string>
     <string-array name="proteins">
         <item>Choose your protein!</item>

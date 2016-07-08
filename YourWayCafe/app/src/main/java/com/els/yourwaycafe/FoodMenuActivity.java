@@ -1,16 +1,16 @@
 package com.els.yourwaycafe;
 
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuInflater;
+
 
 public class FoodMenuActivity extends AppCompatActivity {
-
-//    Spinner mProteinSpinner = (Spinner)findViewById(R.id.spinner_proteins);
-//    Spinner mSidesSpinner = (Spinner) findViewById(R.id.spinner_sides);
-//    Spinner mDrinksSpinner = (Spinner) findViewById(R.id.spinner_drinks);
-//    Spinner mVegSpinner = (Spinner)findViewById(R.id.spinner_veg);
-
-
 
 
     @Override
@@ -19,12 +19,27 @@ public class FoodMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_menu);
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
 
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo( searchManager.getSearchableInfo(getComponentName()) );
+        searchView.setQueryHint("Custom Search Hint");
 
-
-
-
-
+        return true;
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        handleIntent(intent);
+    }
+    private void handleIntent(Intent intent){
+        Intent.ACTION_SEARCH.equals(intent.getAction());
+        intent.getStringExtra(SearchManager.QUERY);
 
     }
+
 }
