@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button mStart = (Button)findViewById(R.id.btn_start);
-        Button mPrev = (Button) findViewById(R.id.btn_prev);
-        Button mFav = (Button)findViewById(R.id.btn_fav);
+        ImageButton mStart = (ImageButton)findViewById(R.id.btn_start);
+        ImageButton mPrev = (ImageButton) findViewById(R.id.btn_prev);
+        ImageButton mFav = (ImageButton)findViewById(R.id.btn_fav);
         View.OnClickListener listener;
 
         assert mStart != null;

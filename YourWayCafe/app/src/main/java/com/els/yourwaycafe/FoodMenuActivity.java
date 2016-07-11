@@ -19,6 +19,8 @@ public class FoodMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_menu);
 
 
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -28,7 +30,7 @@ public class FoodMenuActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setSearchableInfo( searchManager.getSearchableInfo(getComponentName()) );
-        searchView.setQueryHint("Custom Search Hint");
+        searchView.setQueryHint("Enter your favorites here");
 
         return true;
     }
@@ -37,9 +39,15 @@ public class FoodMenuActivity extends AppCompatActivity {
         handleIntent(intent);
     }
     private void handleIntent(Intent intent){
-        Intent.ACTION_SEARCH.equals(intent.getAction());
-        intent.getStringExtra(SearchManager.QUERY);
+
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+
+
+        }
 
     }
 
-}
+    }
+
+

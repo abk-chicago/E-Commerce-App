@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#3E2723</color>
     <color name="colorAccent">#DD2C00</color>
     <color name="main_background">#5D4037</color>
-    <color name="start_btn">#5D4037</color>
-    <color name="prev_btn">#5D4037</color>
-    <color name="fave_button">#5D4037</color>
+    <color name="home">#5D4037</color>
+    <color name="cart">#5D4037</color>
+    <color name="new_bckgrnd">#CF9637</color>
 
 </resources>

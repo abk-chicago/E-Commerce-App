@@ -3,6 +3,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <!-- Default style for ImageButtons -->
+        <item name="android:imageButtonStyle">?android:borderlessButtonStyle</item>
+        <!-- Default style for Buttons -->
+        <item name="android:buttonStyle">?android:borderlessButtonStyle</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
