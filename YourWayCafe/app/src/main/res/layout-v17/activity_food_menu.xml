@@ -11,73 +11,30 @@
     tools:context="com.els.yourwaycafe.FoodMenuActivity"
     android:weightSum="1"
     android:clickable="true"
-    android:background="@drawable/plain_stripe_text"
-    android:textAlignment="inherit">
+    android:textAlignment="inherit"
+    android:background="@drawable/plain_back_new">
 
+    <ListView
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-        <!--android:text="@string/search_choose"-->
-        <!--android:id="@+id/search_choose"-->
-        <!--android:textColor="#ffffff"-->
-        <!--android:layout_marginTop="33dp"-->
-        <!--android:textSize="16dp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true" />-->
-
-
-
-    <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_proteins"
-        android:spinnerMode="dropdown"
-        android:entries="@array/proteins"
-        android:layout_above="@+id/spinner_veg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="25dp" />
+        android:choiceMode="singleChoice"
+        android:id="@+id/list_view_proteins" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"/>
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_sides"
-        android:spinnerMode="dropdown"
-        android:entries="@array/sides"
-        android:layout_below="@+id/spinner_veg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_veg"
-        android:spinnerMode="dropdown"
-        android:entries="@array/veg"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_drinks"
-        android:spinnerMode="dropdown"
-        android:entries="@array/drinks"
-        android:layout_above="@+id/checkout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkout"
+        android:id="@+id/add_btn"
         style="?android:borderlessButtonStyle"
-        android:src="@drawable/checkout_btn"
+        android:src="@drawable/add_btn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:contentDescription="@string/checkout_btn" />
+        android:contentDescription="add_btn" />
 </RelativeLayout>

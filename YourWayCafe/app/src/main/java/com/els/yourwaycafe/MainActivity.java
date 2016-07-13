@@ -11,13 +11,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        YWCSQLiteOpenHelper db = new YWCSQLiteOpenHelper(this);
+        db.getReadableDatabase();
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ImageButton mStart = (ImageButton)findViewById(R.id.btn_start);
-        ImageButton mPrev = (ImageButton) findViewById(R.id.btn_prev);
-        ImageButton mFav = (ImageButton)findViewById(R.id.btn_fav);
-        View.OnClickListener listener;
+
+
 
         assert mStart != null;
 

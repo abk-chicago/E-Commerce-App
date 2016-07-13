@@ -11,50 +11,27 @@
     tools:context="com.els.yourwaycafe.FoodMenuActivity"
     android:weightSum="1"
     android:clickable="true"
-    android:background="@drawable/plain_stripe_text">
+    android:background="@drawable/plain_back_new">
 
-    <Spinner
+    <ListView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_proteins"
-        android:spinnerMode="dropdown"
-        android:entries="@array/proteins"
-        android:layout_above="@+id/spinner_sides"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="41dp" />
+        android:choiceMode="singleChoice"
+        android:id="@+id/menu_list_view"/>
 
-    <Spinner
+
+
+
+
+    <ImageButton
+        style="?android:borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_sides"
-        android:spinnerMode="dropdown"
-        android:entries="@array/sides"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_veg"
-        android:spinnerMode="dropdown"
-        android:entries="@array/veg"
-        android:layout_marginBottom="166dp"
+        android:id="@+id/add_btn"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_drinks"
-        android:spinnerMode="dropdown"
-        android:entries="@array/drinks"
-        android:layout_marginTop="94dp"
-        android:layout_below="@+id/spinner_veg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/add_btn"
+        android:contentDescription="add_btn" />
 </RelativeLayout>

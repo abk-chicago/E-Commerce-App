@@ -18,34 +18,35 @@
         android:id="@+id/btn_start"
         style="?android:borderlessButtonStyle"
         android:src="@drawable/best_order"
-        android:layout_above="@+id/btn_prev"
+        android:layout_below="@+id/choose_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp" />
+        android:layout_marginTop="44dp"
+        android:contentDescription="start" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_prev"
-        style="?android:borderlessButtonStyle"
-        android:src="@drawable/best_prev"
-        android:layout_alignTop="@+id/btn_fav"/>
+    <!--<ImageButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btn_prev"-->
+        <!--style="?android:borderlessButtonStyle"-->
+        <!--android:src="@drawable/best_prev"-->
+        <!--android:layout_alignTop="@+id/btn_fav"/>-->
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_fav"
-        style="?android:borderlessButtonStyle"
-        android:src="@drawable/best_saved"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+    <!--<ImageButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btn_fav"-->
+        <!--style="?android:borderlessButtonStyle"-->
+        <!--android:src="@drawable/best_saved"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"/>-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/choose_text"
         android:text="@string/choose"
-        android:textColor="#ffffff"
+        android:textColor="#3E2723"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

@@ -1,5 +1,5 @@
 package com.els.yourwaycafe;
-
+//help from this site: http://www.vogella.com/tutorials/AndroidSQLite/article.html#database-and-data-model
 /**
  * Created by ericaschulz on 6/27/16.
  */
@@ -15,7 +15,7 @@ public class Proteins {
             new Proteins(2,"Chicken",6,"proteins"),
             new Proteins(3,"Pork",6, "proteins"),
             new Proteins(4,"Tilapia",4, "proteins"),
-            new Proteins(5,"Beans",2,"proteins")
+            new Proteins(5,"Black Beans",2,"proteins")
 
     };
 
@@ -56,5 +56,12 @@ public class Proteins {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+
+    //used by ArrayAdapter
+    @Override
+    public String toString(){
+        return name;
     }
 }

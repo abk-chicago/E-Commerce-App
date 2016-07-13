@@ -1,12 +1,12 @@
 package com.els.yourwaycafe;
 
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-public class DrinksActivity extends AppCompatActivity {
+public class DrinksActivity extends ListActivity {
 
     private ListView mListviewDrinks;
     private AdapterView.OnItemClickListener mItemClickListenerDrinks;
@@ -16,6 +16,6 @@ public class DrinksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drinks);
+        setContentView(R.layout.activity_food_menu);
     }
 }

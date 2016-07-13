@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">YourWayCafe</string>
+    <string name="app_name">Your Way Cafe</string>
     <string name="btn_fav">Favorites</string>
     <string name="btn_prev">Previous Orders</string>
     <string name="btn_start">Start Order</string>
     <string name="content_description">feast</string>
     <string name="home">Home</string>
     <string name="checkout">Checkout</string>
-    <string name="choose">Choose from our menu, or search for a special item and add it to your cart.</string>
+    <string name="choose">CHOOSE FROM OUR MENU, OR SEARCH FOR YOUR FAVORITES.</string>
     <string name="search_hint">Enter your favorites here</string>
     <string name="search_choose">Search for your favorites above.</string>
     <string name="mix_match">Mix and match your way to your customized meal!</string>
@@ -41,4 +41,5 @@
         <item>Asparagus</item>
         <item>Broccoli and carrots</item>
     </string-array>
+    <string name="title_activity_shopping_cart">ShoppingCartActivity</string>
 </resources>

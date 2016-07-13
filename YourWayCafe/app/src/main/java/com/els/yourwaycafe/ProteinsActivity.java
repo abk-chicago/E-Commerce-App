@@ -1,21 +1,45 @@
 package com.els.yourwaycafe;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.ListActivity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CursorAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
-public class ProteinsActivity extends AppCompatActivity {
+public class ProteinsActivity extends ListActivity {
 
     private ListView mListViewProteins;
     private AdapterView.OnItemClickListener mOnItemClickListenerProteins;
     private Button mButtonProteinsAdd;
+    private YWCSQLiteOpenHelper db;
+    private ArrayAdapter mArrayAdapter;
+    private CursorAdapter mCursorAdapter;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proteins);
+        setContentView(R.layout.activity_food_menu);
+
+
+
+
+        mListViewProteins = (ListView)findViewById(R.id.list_view_proteins);
+
+        db = new YWCSQLiteOpenHelper(ProteinsActivity.this);
+        Cursor cursor = db.getMenuList();
+
+        mCursorAdapter = new SimpleCursorAdapter(this,android.R.layout.simple_list_item_1,cursor,new String[]{YWCSQLiteOpenHelper.COL_ITEM_NAME},new int[]{android.R.id.text1},0);
+        mListViewProteins.setAdapter(mCursorAdapter);
+
+
+
     }
+
 }

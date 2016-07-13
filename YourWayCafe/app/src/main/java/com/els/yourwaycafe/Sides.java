@@ -55,4 +55,9 @@ public class Sides {
     public void setType(String type) {
         this.type = type;
     }
+    //used by ArrayAdapter
+    @Override
+    public String toString(){
+        return sideDish;
+    }
 }
