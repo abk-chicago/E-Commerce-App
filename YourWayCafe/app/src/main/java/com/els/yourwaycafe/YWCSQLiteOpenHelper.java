@@ -1,6 +1,5 @@
 package com.els.yourwaycafe;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -72,13 +71,9 @@ public class YWCSQLiteOpenHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(CREATE_PROTEINS_LIST_TABLE);
-        seedDataProteins(db);
-
         db.execSQL(CREATE_SIDES_LIST_TABLE);
-        seedDataSides(db);
-
         db.execSQL(CREATE_DRINKS_LIST_TABLE);
-        seedDataDrinks(db);
+
 
 
     }
@@ -95,59 +90,6 @@ public class YWCSQLiteOpenHelper extends SQLiteOpenHelper{
 
 
 
-    public void insertPdata(SQLiteDatabase db, int id, String name, String price) {
-        //insert into table_name values (1,etc,etc)
-
-        ContentValues values = new ContentValues();
-        values.put("id", id);
-        values.put("name", name);
-        values.put("price", price);
-
-        db.insert(PROTEINS_LIST_TABLE_NAME, null, values);
-    }
-    public void insertSdata(SQLiteDatabase db, int id, String name, String price) {
-
-        ContentValues values = new ContentValues();
-        values.put("id", id);
-        values.put("name", name);
-        values.put("price", price);
-
-        db.insert(SIDES_LIST_TABLE_NAME, null, values);
-    }
-    public void insertDdata(SQLiteDatabase db, int id, String name, String price) {
-
-        ContentValues values = new ContentValues();
-        values.put("id", id);
-        values.put("name", name);
-        values.put("price", price);
-
-        db.insert(DRINKS_LIST_TABLE_NAME, null, values);
-    }
-
-
-    public void seedDataProteins(SQLiteDatabase db) {
-        insertPdata(db, 1, "Rib Eye Steak", "$10");
-        insertPdata(db, 2, "Roast Chicken", "$8");
-        insertPdata(db, 3, "Smothered Pork Chops", "$8");
-        insertPdata(db, 4, "Baked Tilapia", "$7");
-        insertPdata(db, 5, "Slow-cooked Black Beans", "$4");
-    }
-
-    public void seedDataSides(SQLiteDatabase db) {
-        insertSdata(db, 1, "Coleslaw", "$2");
-        insertSdata(db, 2, "Mashed potatoes", "$3");
-        insertSdata(db, 3, "Macaroni and cheese", "$3");
-        insertSdata(db, 4, "French Fries", "$2");
-        insertSdata(db, 5, "Hummus", "$4");
-    }
-    public void seedDataDrinks(SQLiteDatabase db) {
-        insertDdata(db, 1, "Coke", "$1");
-        insertDdata(db, 2, "Diet Coke", "$1");
-        insertDdata(db, 3, "Iced Tea", "$2");
-        insertDdata(db, 4, "Coffee", "$1");
-        insertDdata(db, 5, "Lemonade", "$2");
-
-    }
 
     public Cursor getProteinsList(){
 
@@ -173,6 +115,7 @@ public class YWCSQLiteOpenHelper extends SQLiteOpenHelper{
 
         return cursor;
     }
+
 
 
     public Cursor searchProteinList(String query){
