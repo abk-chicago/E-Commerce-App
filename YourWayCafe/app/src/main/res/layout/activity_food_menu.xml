@@ -11,6 +11,7 @@
     tools:context="com.els.yourwaycafe.FoodMenuActivity"
     android:weightSum="1"
     android:clickable="true"
+    android:textAlignment="inherit"
     android:background="@drawable/plain_back_new">
 
     <ListView
@@ -18,20 +19,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
-        android:id="@+id/menu_list_view"/>
+        android:id="@+id/list_view_proteins" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/list_view_proteins"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:id="@+id/list_view_sides"/>
 
-
-
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_view_sides"
+        android:choiceMode="singleChoice"
+        android:id="@+id/list_view_drinks"/>
 
 
     <ImageButton
-        style="?android:borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_btn"
+        style="?android:borderlessButtonStyle"
+        android:src="@drawable/add_btn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/add_btn"
         android:contentDescription="add_btn" />
 </RelativeLayout>

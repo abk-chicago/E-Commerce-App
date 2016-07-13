@@ -42,4 +42,5 @@
         <item>Broccoli and carrots</item>
     </string-array>
     <string name="title_activity_shopping_cart">ShoppingCartActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

@@ -20,6 +20,19 @@
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
         android:id="@+id/list_view_proteins" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/list_view_proteins"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:id="@+id/list_view_sides"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_view_sides"
+        android:choiceMode="singleChoice"
+        android:id="@+id/list_view_drinks"/>
 
 
     <ImageButton
