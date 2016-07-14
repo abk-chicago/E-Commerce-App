@@ -10,17 +10,17 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 
 public class FoodMenuActivity extends AppCompatActivity {
 
     CursorAdapter mCursorAdapterSe;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,12 @@ public class FoodMenuActivity extends AppCompatActivity {
         CursorAdapter mProteinAdapter;
         CursorAdapter mSidesAdapter;
         CursorAdapter mDrinksAdapter;
-//
+        AdapterView.OnItemClickListener mListener;
+
+
+
+
+
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
@@ -64,18 +69,39 @@ public class FoodMenuActivity extends AppCompatActivity {
         assert mDrinksListView != null;
         mDrinksListView.setAdapter(mDrinksAdapter);
 
+        mListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent,View view,int position, long id){
+                Toast.makeText(FoodMenuActivity.this,"Added to your cart!",Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        mProteinListView.setOnItemClickListener(mListener);
+        mSidesListView.setOnItemClickListener(mListener);
+        mDrinksListView.setOnItemClickListener(mListener);
+
+
         handleIntent(getIntent());
 
 
-        ImageButton mAdd = (ImageButton) findViewById(R.id.add_btn);
-        assert mAdd != null;
-        mAdd.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+        ImageButton mCheckout = (ImageButton) findViewById(R.id.checkout);
+        assert mCheckout != null;
+        mCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent mIntentCart = new Intent(FoodMenuActivity.this, ShoppingCartActivity.class);
                 startActivity(mIntentCart);
             }
         });
+
+
+
+
 
 
     }
@@ -104,14 +130,15 @@ public class FoodMenuActivity extends AppCompatActivity {
 
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             YWCSQLiteOpenHelper dbSe = new YWCSQLiteOpenHelper(FoodMenuActivity.this);
+            dbSe.getReadableDatabase();
             String query = intent.getStringExtra(SearchManager.QUERY);
             Cursor cs = dbSe.searchSidesList(query);
             Cursor cp = dbSe.searchProteinList(query);
             Cursor cd = dbSe.searchDrinkList(query);
             mCursorAdapterSe.changeCursor(cs);
-            mCursorAdapterSe.notifyDataSetChanged();
             mCursorAdapterSe.changeCursor(cp);
             mCursorAdapterSe.changeCursor(cd);
+            mCursorAdapterSe.notifyDataSetChanged();
 
        }
 

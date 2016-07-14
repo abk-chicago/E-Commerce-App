@@ -14,16 +14,17 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/item_list_view" />
+        android:id="@+id/cart_list_view"
+        android:choiceMode="singleChoice" />
 
     <ImageButton
         style="?android:borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/checkout"
-        android:src="@drawable/check_small"
+        android:id="@+id/place_order"
+        android:src="@drawable/place_order"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/item_list_view"
-        android:layout_alignEnd="@+id/item_list_view"
-        android:contentDescription="checkout" />
+        android:layout_alignRight="@+id/cart_list_view"
+        android:layout_alignEnd="@+id/cart_list_view"
+        android:contentDescription="place_order" />
 </RelativeLayout>
