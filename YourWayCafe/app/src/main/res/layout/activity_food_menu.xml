@@ -11,8 +11,8 @@
     tools:context="com.els.yourwaycafe.FoodMenuActivity"
     android:weightSum="1"
     android:clickable="true"
-    android:textAlignment="inherit"
     android:background="@drawable/plain_back_new">
+
 
     <ListView
 
@@ -23,6 +23,7 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_below="@+id/list_view_proteins"
+        android:layout_above="@+id/list_view_drinks"
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
         android:id="@+id/list_view_sides"/>

@@ -40,22 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    public static void startClick(View v) {
-//        @Override
-//
-//
-//
-//
-//
-//    }
-//
-//    public static void showFav(View v){
-//
-//    }
-//
-//    public static void showPrev(View v) {
-//
-//    }
+
 }
 
 

@@ -6,7 +6,7 @@
     <string name="content_description">feast</string>
     <string name="home">Home</string>
     <string name="checkout">Checkout</string>
-    <string name="choose">CHOOSE FROM OUR MENU, OR SEARCH FOR YOUR FAVORITES.</string>
+    <string name="choose">CHOOSE FROM OUR MENU, OR SEARCH FOR YOUR FAVORITES</string>
     <string name="search_hint">Enter your favorites here</string>
     <string name="search_choose">Search for your favorites above.</string>
     <string name="mix_match">Mix and match your way to your customized meal!</string>
@@ -33,13 +33,6 @@
         <item>Iced Tea</item>
         <item>Lemonade</item>
         <item>Coffee</item>
-    </string-array>
-    <string-array name="veg">
-        <item>Choose your veggie!</item>
-        <item>Sauteed spinach</item>
-        <item>Baby corn</item>
-        <item>Asparagus</item>
-        <item>Broccoli and carrots</item>
     </string-array>
     <string name="title_activity_shopping_cart">ShoppingCartActivity</string>
     <string name="title_activity_main2">Main2Activity</string>

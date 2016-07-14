@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -22,6 +21,7 @@ public class FoodMenuActivity extends AppCompatActivity {
     CursorAdapter mCursorAdapterSe;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +33,9 @@ public class FoodMenuActivity extends AppCompatActivity {
         CursorAdapter mProteinAdapter;
         CursorAdapter mSidesAdapter;
         CursorAdapter mDrinksAdapter;
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
 
         mProteinListView = (ListView)findViewById(R.id.list_view_proteins);
@@ -78,8 +78,6 @@ public class FoodMenuActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
     @Override
@@ -103,12 +101,17 @@ public class FoodMenuActivity extends AppCompatActivity {
     private void handleIntent(Intent intent) {
 
 
+
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             YWCSQLiteOpenHelper dbSe = new YWCSQLiteOpenHelper(FoodMenuActivity.this);
             String query = intent.getStringExtra(SearchManager.QUERY);
-            Cursor cs = dbSe.searchProteinList(query);
+            Cursor cs = dbSe.searchSidesList(query);
+            Cursor cp = dbSe.searchProteinList(query);
+            Cursor cd = dbSe.searchDrinkList(query);
             mCursorAdapterSe.changeCursor(cs);
             mCursorAdapterSe.notifyDataSetChanged();
+            mCursorAdapterSe.changeCursor(cp);
+            mCursorAdapterSe.changeCursor(cd);
 
        }
 
