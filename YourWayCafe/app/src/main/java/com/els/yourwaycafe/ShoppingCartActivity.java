@@ -15,7 +15,6 @@ public class ShoppingCartActivity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +26,9 @@ public class ShoppingCartActivity extends AppCompatActivity {
 
         CartSingleton cart = CartSingleton.getInstance();
         cart.add("test");
+
+
+        //Delete single items from cart with onItemLngClick listener
 
 //        mLongClickListener = new AdapterView.OnItemLongClickListener(){
 //            @Override

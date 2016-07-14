@@ -72,7 +72,9 @@ public class FoodMenuActivity extends AppCompatActivity {
         mListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent,View view,int position, long id){
+
                 Toast.makeText(FoodMenuActivity.this,"Added to your cart!",Toast.LENGTH_SHORT).show();
+
             }
         };
 
@@ -86,9 +88,6 @@ public class FoodMenuActivity extends AppCompatActivity {
 
 
 
-
-
-
         ImageButton mCheckout = (ImageButton) findViewById(R.id.checkout);
         assert mCheckout != null;
         mCheckout.setOnClickListener(new View.OnClickListener() {
@@ -98,9 +97,6 @@ public class FoodMenuActivity extends AppCompatActivity {
                 startActivity(mIntentCart);
             }
         });
-
-
-
 
 
 
@@ -127,7 +123,6 @@ public class FoodMenuActivity extends AppCompatActivity {
     private void handleIntent(Intent intent) {
 
 
-
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             YWCSQLiteOpenHelper dbSe = new YWCSQLiteOpenHelper(FoodMenuActivity.this);
             dbSe.getReadableDatabase();
@@ -141,6 +136,7 @@ public class FoodMenuActivity extends AppCompatActivity {
             mCursorAdapterSe.notifyDataSetChanged();
 
        }
+
 
 
     }
